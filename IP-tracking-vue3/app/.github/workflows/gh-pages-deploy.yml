@@ -15,4 +15,6 @@
           - name: Install packages
             run: npm i
           - name: Set Creds
-            run: git config user.name "orttak" && git config user.email "orttak@gmail.com"
+            run: git config user.name "<username>" && git config user.email "<email>"
+          - name: Deploy
+            run: npm run deploy
