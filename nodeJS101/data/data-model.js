@@ -42,3 +42,4 @@ function deleteAktor(id) {
     .where({id})
     .del();
   }
+

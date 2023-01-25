@@ -30,6 +30,7 @@ server.get("/", (req, res) => {
   res.send("Express'ten merhaba");
 });
 
+
 server.use(errorHandling);
 
 server.listen(3000, () => {
