@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  geoserver:
+    build: ./geoserver
+    image: webapp/geoserver
+    ports:
+      - 8080:8080
+    volumes:
+      - type: volume
+        source: geoserver_data
+        target: /usr/share/geoserver/data_dir
+      
+      - ./geoserver/sample_data:/opt
+    environment:
+      - GEOSERVER_CSRF_DISABLED=true
+
+
+volumes:
+  geoserver_data:
+    driver: local

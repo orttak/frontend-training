@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-GIS with leaflet</title>
+    <!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/thestyle.css">
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+   
+</head>
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <a class="navbar-brand" href="./"> GIS Portal</a>
+            <button class="navbar-toggler" type="button" 
+            data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="true" aria-label="Toggle navigation">
+        
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="./home.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./about.html" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </section>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 left-sidebar">
+                <div class="mt-4 mb-3" >
+                    <h4>Search Location</h4>
+                </div>
+            <div class="form-inline">
+                <input type="text" class="form-control col-sm-9" placeholder="Find ...." 
+                id="search-value">
+                <div class="form-group sm-3">
+                    <br>
+                    <button class="btn btn-secondary" onclick="searchWFS()" > Search</button>
+                    <button class="btn btn-secondary" onclick="clearResult()"> Clear</button>
+                </div>
+            </div>
+            </div>
+            
+            <div class="col-lg-9" >
+                <div id="map"></div>
+                
+            </div>
+           
+
+        </div>
+        
+
+
+    </section>
+
+<script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/leaflet.js"> </script>
+
+
+</body>
+</html>
